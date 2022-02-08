@@ -5,3 +5,4 @@
 3. VS code, Live Server bővítmény
 4. Console, javascript alapok
 5. Tömbfüggvények
+6. 1. feladat
