@@ -22,19 +22,42 @@ let total = task2.reduce((p, c) => p + c);
 t2div.innerHTML = total;
 
 // 3. Csak a négyzeteket tartsuk meg!
-let task3 = []
+let task3 = shapes.filter(shape => shape == "rect")
+draw(task3,t3div);
 
 // 4. Az első négyzet helye?
-let task4;
+let task4 = shapes.findIndex(e => e == "rect");
+console.log(task4)
+t4div.innerHTML = task4;
 
 // 5. Van négyzetünk a tömbben?
-let task5;
+let task5 = shapes.some(e => e == "rect");
+console.log(task5)
+if (task5) t5div.innerHTML = "Van";
+else t5div.innerHTML = "Nincs";
 
 // 6. Minden elem kör?
-let task6; 
+let task6;
+t6div.innerHTML= shapes.every(e => e == "circle") ? "Minden elem kör." : "Nem minden elem kör.";
 
-// 7. Hány négyzet és hány kör van?
-let task7;
+// 7. Hány négyzet és hány kör van? 
+
+// GYORS KOMMENT: ALT+SHIFT+A
+/* let task7;
+let task7R = shapes.filter(e => e == "rect").length;
+let task7C = shapes.filter(e => e == "circle").length; */ 
+
+const task7 = shapes.reduce(
+    (s,x) => {
+        x == "circle" ? (s.circles += 1) : (s.rects +=1);
+        return s;
+    },
+    {
+        circles: 0, rects: 0
+    }
+)
+t7div.innerHTML = `Körök száma: ${task7.circles}, Négyzetek száma: ${task7.rects}`;
+
 
 // 8. A harmadik elemtől kezdve mindegyik legyen kör!
 let task8 = [];
