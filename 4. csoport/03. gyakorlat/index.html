@@ -10,18 +10,7 @@
         td {
             border: 1px solid black;
         }
-        .disabled {
-            pointer-events: none;
-            color: gray;
-        }
-        #task2 {
-            width: 50px;
-            height: 50px;
-            background-color: green;
-        }
-        .pipa::after {
-            content: "✅";
-        }
+    
     </style>
 </head>
 <body>
@@ -32,9 +21,7 @@
         <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript referencia</a><br>
         <a href="http://jsfiddle.net/">JavaScript homokozó</a><br>
     <h2>Oldjuk meg, hogy a csúszkák segítségével változzon a div mérete!</h2>
-    <div id="task2"></div>
-    Height: <input type="range" name="" id="height" min="1" max="100" value="50">
-    Width: <input type="range" name="" id="width"  min="1" max="100" value="50">
+    
     <h2>To-do-list </h2>
     <h4>Az elemekre kattintáskor tegyen pipát az elem mögé, a következő kattintáskor vegye ki azt!</h4>
         <ul>
@@ -47,9 +34,8 @@
     <h4> a) Javascripttel készítsünk egy 10x10-es táblázatot 10x10-es cellákkal a "#table" div-be. </h4>
     <h4> b) A cellákra kattintáskor a color inputból bekért színnel rajzolja</h4>
     <h4> c) Ha az alt gomb le van nyomva, delegáljuk a feladatot a sor összes cellájára! <a href="https://github.com/gvikthor/Webprogramozas/tree/master/20-21-2/Deleg%C3%A1l%C3%A1sW">Thor delegál</a></h4>
-    <input type="color" id="cinput">
     <div id="table"></div>
-  
+    <input type="color" id="cinput">
     <div id="table"></div>
     <script src="script.js"></script>
 </body>
